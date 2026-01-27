@@ -1,0 +1,7 @@
+GUI (Graphical User Interface) and CLI (Command-Line Interface) are two ways to interact with a computer.
+
+A GUI uses visual elements like icons, windows, and buttons. It is easy to use and good for beginners because users can click instead of typing commands.
+
+A CLI uses text commands that users type into a terminal. It can be harder to learn, but it is faster and more powerful for advanced users.
+
+In conclusion, GUI is better for everyday users, while CLI is better for users who need more control and efficiency.
