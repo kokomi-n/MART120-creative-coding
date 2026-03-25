@@ -1,0 +1,70 @@
+<html>
+<title>Forms</title>
+
+<head>
+  <script>
+    function getData() {
+      var nameInput = document.getElementById("txtName");
+      var emailInput = document.getElementById("txtEmail");
+      var termsInput = document.getElementById("chkTerms");
+
+      var name = nameInput.value.trim();
+      var email = emailInput.value.trim();
+      var terms = termsInput.checked;
+
+
+      nameInput.style.backgroundColor = "";
+      emailInput.style.backgroundColor = "";
+
+
+      if (name === "") {
+        nameInput.style.border = "2px solid red";
+        nameInput.focus();
+        return;
+      }
+
+      if (email === "") {
+        emailInput.style.border = "2px solid red";
+        emailInput.focus();
+        return;
+      }
+
+      
+      if (!terms) {
+        alert("You must agree to the terms.");
+        termsInput.focus();
+        return;
+      }
+
+      document.getElementById("finalResult").innerHTML = "Submitted!";
+    }
+  </script>
+</head>
+
+<body>
+  
+  <table>
+    <tr>
+      <td>Name</td>
+      <td><input type="text" id="txtName"></td>
+    </tr>
+    <tr>
+      <td>Email address</td>
+      <td><input type="text" id="txtEmail"></td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <input type="checkbox" id="chkTerms"> I agree to the terms
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <button id="btnSubmit" onclick="getData();">Submit</button>
+      </td>
+    </tr>
+  </table>
+
+  <div id="finalResult"></div>
+</body>
+
+</html>
